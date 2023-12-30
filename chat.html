@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TTS Chatbot</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+   
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="data:,">
+    
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-8 col-xl-6 chat">
+          <div class="card">
+            <div class="card-header msg_head">
+              <div class="d-flex bd-highlight">
+                <div class="img_cont">
+                  <img
+                    src="static/assets/tts-logo-1.png"
+                    class="rounded-circle user_img"
+                    width="50"
+                    height="50"
+                  />
+                  <span class="online_icon"></span>
+                </div>
+                <div class="user_info">
+                  <span>ChatBot</span>
+                  <p>Ask me anything! <div id="session-id" style="color: black;"></div></p>
+                </div>
+              </div>
+            </div>
+            <div id="chat-log" class="card-body msg_card_body">
+              <!-- Chat log will be appended here -->
+            </div>
+            <div class="waveform-container">
+              <l-waveform
+                size="35"
+                stroke="3.5"
+                speed="1"
+                color="black"
+              ></l-waveform>
+            </div>
+            <div class="card-footer">
+              <form id="chat-form" class="input-group">
+                <input
+                  type="text"
+                  id="chat-input"
+                  name="msg"
+                  placeholder="Type your message..."
+                  autocomplete="off"
+                  class="form-control type_msg"
+                  required
+                />
+                <div class="input-group-append">
+                  <button
+                    type="submit"
+                    id="send"
+                    class="input-group-text send_btn"
+                  >
+                    <i class="fas fa-location-arrow"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+   
+  </body>
+</html>
+
+ 

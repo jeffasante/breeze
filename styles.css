@@ -1,0 +1,78 @@
+ 
+ body {
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+.chat-container {
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-log {
+    background-color: #000;
+    color: green;
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message-user, .message-bot {
+    background-color: #011;
+    color: #0f0;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.message-bot {
+    background-color: #020;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.form-control {
+    background-color: #000;
+    color: green;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.send-button {
+    background-color: #333;
+    color: #0f0;
+    border: 1px solid #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #444;
+}
+
+@media only screen and (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+    }
+}
+
+#chat-log {
+    height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: black; /* Ensure chat log text is white */
+    display: block; /* Make the form take the full width */
+    margin-top: 20px; /* Add some space above the form */
+}
+
+.waveform-container {
+    color: #000;
+}
